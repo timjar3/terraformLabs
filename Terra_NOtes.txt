@@ -1,0 +1,56 @@
+after Installation of terraform in respective OS platforms
+
+Always make new directory for different providers (AWS.AZURE.GCP) While using terraform init...cmd
+
+>> terraform init 
+
+This initilazies the directory for Terra core to check for config files and install necessary plugins.
+Make sure to right the appropriate main.tf files for to start Init command.
+
+>> terraform validate
+
+This validates the config files for syntax and cross checks the plugin
+
+>> terraform plan
+
+ this shows the blueprint of all the necessary setups that would be completed.
+ 
+>> terraform apply
+
+this start installing the OS and other settings that is in the tf config file.
+
+>>terraform destroy
+
+this destroys the installed infrastructure and completly removes the defined infrastructure and 
+also removes the all the data in terraform.tfstate file. 
+
+the tfstate.backup file saves the previous data that was executed in the tfstate file.
+
+*****Note***** the shortcomings of the terraform state file is only store the previous or the latest data from the 
+provision that was executed.
+
+************************************************************************
+
+we can use:
+
+>> terraform apply -auto-approve
+
+to avoid pressing yes again during any prompts
+
+
+# # #  to avoid using destroy command: # # # # # # # 
+
+
+1. just delete the resource code from the config file just leaving the aws access key block code
+
+and run > terraform apply command to remove the infrastructure that was build using the code and deleted
+
+using the same block code, just be removing the resources in the config file.
+
+
+
+
+
+
+
+
