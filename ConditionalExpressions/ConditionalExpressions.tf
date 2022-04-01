@@ -27,3 +27,4 @@ resource "aws_instance" "prod" {
     # if the value of variable istest is false, than the count will be set to 1
     # and one instance of this resource Prod will be created.
     }
+done
